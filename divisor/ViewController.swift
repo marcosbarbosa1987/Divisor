@@ -10,11 +10,40 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // MARK: - Properties
+    
+    let calculatorBrain = CalculatorBrain()
+    
+    // MARK: - Outlets
+    
+    @IBOutlet weak var firstNumberTextField: UITextField!
+    @IBOutlet weak var secondNumberTextField: UITextField!
+    @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var calculateButton: UIButton!
+    
+    // MARK: - Overrides
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        self.view.addGestureRecognizer(tap)
+        
     }
 
+    // MARK: - Actions
+    
+    @IBAction func calculateWasClicked(_ sender: Any) {
+        dismissKeyboard()
+    }
+}
 
+// MARK: - Extensions
+
+extension ViewController {
+    
+    @objc func dismissKeyboard() {
+        self.view.endEditing(true)
+    }
 }
 

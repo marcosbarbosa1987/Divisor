@@ -15,6 +15,9 @@
 		CDEE1CBD23C6CA8A0083AB05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDEE1CBB23C6CA8A0083AB05 /* LaunchScreen.storyboard */; };
 		CDEE1CC823C6CA8A0083AB05 /* divisorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEE1CC723C6CA8A0083AB05 /* divisorTests.swift */; };
 		CDEE1CD323C6CA8A0083AB05 /* divisorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEE1CD223C6CA8A0083AB05 /* divisorUITests.swift */; };
+		CDEE1CE123C6D0870083AB05 /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEE1CE023C6D0870083AB05 /* CalculatorBrain.swift */; };
+		CDEE1CE223C6D0870083AB05 /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEE1CE023C6D0870083AB05 /* CalculatorBrain.swift */; };
+		CDEE1CE323C6D0870083AB05 /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEE1CE023C6D0870083AB05 /* CalculatorBrain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,7 @@
 		CDEE1CCE23C6CA8A0083AB05 /* divisorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = divisorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDEE1CD223C6CA8A0083AB05 /* divisorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = divisorUITests.swift; sourceTree = "<group>"; };
 		CDEE1CD423C6CA8A0083AB05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDEE1CE023C6D0870083AB05 /* CalculatorBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,7 @@
 				CDEE1CB923C6CA8A0083AB05 /* Assets.xcassets */,
 				CDEE1CBB23C6CA8A0083AB05 /* LaunchScreen.storyboard */,
 				CDEE1CBE23C6CA8A0083AB05 /* Info.plist */,
+				CDEE1CE023C6D0870083AB05 /* CalculatorBrain.swift */,
 			);
 			path = divisor;
 			sourceTree = "<group>";
@@ -261,6 +266,7 @@
 			files = (
 				CDEE1CB523C6CA860083AB05 /* ViewController.swift in Sources */,
 				CDEE1CB123C6CA860083AB05 /* AppDelegate.swift in Sources */,
+				CDEE1CE123C6D0870083AB05 /* CalculatorBrain.swift in Sources */,
 				CDEE1CB323C6CA860083AB05 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDEE1CE223C6D0870083AB05 /* CalculatorBrain.swift in Sources */,
 				CDEE1CC823C6CA8A0083AB05 /* divisorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDEE1CE323C6D0870083AB05 /* CalculatorBrain.swift in Sources */,
 				CDEE1CD323C6CA8A0083AB05 /* divisorUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

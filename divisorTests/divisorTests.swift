@@ -30,7 +30,15 @@ class divisorTests: XCTestCase {
     func testTenDivideByZeroMustBeNil() {
        calculatorBrain.divideTwoNumbers(dividend: 10, divisor: 0) { (result, error) in
             XCTAssertNil(result, "Result must be nil")
-            XCTAssert(error!.domain == "Error dividing by Zero", "Error message should be 'Error dividing by Zero'")
+            XCTAssert(error!.domain == "Division by Zero", "Error message should be 'Division by Zero'")
+        }
+    }
+    
+    func testTestDivisionTime() {
+        measure {
+            self.calculatorBrain.divideTwoNumbers(dividend: 10, divisor: 5) { (result, erro) in
+                
+            }
         }
     }
 }

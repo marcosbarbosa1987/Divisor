@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     // MARK: - Properties
     
     let calculatorBrain = CalculatorBrain()
+    let calculatorOnline = OnlineCalculatorBrain()
     
     // MARK: - Outlets
     
@@ -29,6 +30,9 @@ class ViewController: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         self.view.addGestureRecognizer(tap)
         
+//        calculatorOnline.calculateWithTwoNumbers(dividend: 10, divisor: 3) { (response, error) in
+//            print(response)
+//        }
     }
 
     // MARK: - Actions

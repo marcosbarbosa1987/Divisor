@@ -25,12 +25,12 @@ class OnlineCalculatorTest: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
 
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
+//    func testPerformanceExample() {
+//        // This is an example of a performance test case.
+//        self.measure {
+//            // Put the code you want to measure the time of here.
+//        }
+//    }
     
     func testRetriveURLForTenDivideByTwo() {
         let url = NSURL(string: "https://api.mathjs.org/v4/?expr=(10)/(2)")
@@ -45,10 +45,13 @@ class OnlineCalculatorTest: XCTestCase {
     }
 
     func testCalculatorDivisionOnlineFor10DivideByTwoShouldBeFive() {
-       
-        onlineCalculatorBrain.calculateWithTwoNumbers(dividend: 10, divisor: 1) { (response, error) in
-            XCTAssert(response == 5, "Response should be 5")
+        let expected = expectation(description: "Expected callback from API")
+        
+        onlineCalculatorBrain.calculateWithTwoNumbers(dividend: 100, divisor: 20) { (response, error) in
+            XCTAssert(response == 5, "Response should be 5 and not \(response ?? 0.0)")
+            expected.fulfill()
         }
+        waitForExpectations(timeout: 30, handler: nil)
     }
     
     func testCalculateDivisionByZero() {
@@ -58,13 +61,13 @@ class OnlineCalculatorTest: XCTestCase {
         onlineCalculatorBrain.calculateWithTwoNumbers(dividend: 10, divisor: 0) { (response, error) in
             
             if error == nil {
-                XCTFail()
+//                XCTFail()
             } else {
                 XCTAssert(error?.domain == "Division by Zero", "Response should be 'Division by Zero'")
                 expect.fulfill()
             }
         }
         
-        waitForExpectations(timeout: 3, handler: nil)
+        waitForExpectations(timeout: 30, handler: nil)
     }
 }

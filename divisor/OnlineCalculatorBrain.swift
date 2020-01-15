@@ -30,14 +30,14 @@ class OnlineCalculatorBrain: NSObject {
                 if let result = data {
                     let value = NSString(data: result, encoding: String.Encoding.utf8.rawValue)
                     completionHandler(value?.floatValue, nil)
+                } else {
+                    let localError = NSError(domain: "No data was found", code: 1, userInfo: nil)
+                    completionHandler(nil, localError)
                 }
                 
-                let localError = NSError(domain: "No data was found", code: 1, userInfo: nil)
-                completionHandler(nil, localError)
-                
             } else {
-                print(error!.localizedDescription)
-                completionHandler(nil, error as! NSError)
+                let err = NSError(domain: error!.localizedDescription, code: 1, userInfo: nil)
+                completionHandler(nil, err)
             }
         }
         tast.resume()
